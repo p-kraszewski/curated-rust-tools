@@ -29,7 +29,7 @@ struct List {
 
 impl std::fmt::Display for Package {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(f, "### {}", self.name.trim())?;
+        write!(f, "### <a name=\"{}\"></a>{}", linkize(&self.name), self.name.trim())?;
 
         if let Some(i) = &self.url {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-homepage-navy.svg?style={}\">]({})", FORMAT, i)?;
@@ -67,7 +67,7 @@ fn read(path: &str) -> io::Result<List> {
 
 
 fn linkize(s: &str) -> String {
-    s.to_lowercase().replace(" ", "-")
+    s.trim().to_lowercase().replace(" ", "-")
 }
 
 
