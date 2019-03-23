@@ -11,6 +11,9 @@ use std::vec::Vec;
 
 use clap::{App, Arg};
 
+//const FORMAT: &str = "for-the-badge";
+const FORMAT: &str = "plastic";
+
 #[derive(Debug, PartialEq, PartialOrd, Ord, Eq, Serialize, Deserialize, Clone)]
 struct Package {
     name: String,
@@ -27,29 +30,28 @@ struct List {
 impl std::fmt::Display for Package {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         write!(f, "### {}", self.name)?;
-        write!(f, "\n- ")?;
+        write!(f, "\n")?;
 
         if let Some(i) = &self.url {
-            write!(f, " [<img src=\"https://img.shields.io/badge/URL-homepage-navy.svg?style=for-the-badge\">]({})", i)?;
+            write!(f, " [<img src=\"https://img.shields.io/badge/URL-homepage-navy.svg?style={}\">]({})", FORMAT, i)?;
         }
 
-        write!(f, " [<img src=\"https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=for-the-badge\">](https://crates.io/crates/{})", self.name)?;
+        write!(f, " [<img src=\"https://img.shields.io/badge/URL-Crates.IO-navy.svg?style={}\">](https://crates.io/crates/{})", FORMAT, self.name)?;
 
         if let Some(i) = &self.github {
-            write!(f, " [<img src=\"https://img.shields.io/badge/URL-GitHub-navy.svg?style=for-the-badge\">](https://github.com/{})", i)?;
+            write!(f, " [<img src=\"https://img.shields.io/badge/URL-GitHub-navy.svg?style={}\">](https://github.com/{})", FORMAT, i)?;
         }
 
         if let Some(i) = &self.github {
-            write!(f, "\n- ")?;
-            write!(f, " <img src=\"https://img.shields.io/github/last-commit/{}.svg?style=for-the-badge\">", i)?;
-            write!(f, " <img src=\"https://img.shields.io/github/tag/{}.svg?style=for-the-badge\">", i)?;
+            write!(f, " <img src=\"https://img.shields.io/github/last-commit/{}.svg?style={}\">", i, FORMAT)?;
+            write!(f, " <img src=\"https://img.shields.io/github/tag/{}.svg?style={}\">", i, FORMAT)?;
 //            write!(f, " <img src=\"https://img.shields.io/github/commit-activity/y/{}.svg?style=for-the-badge\">", gh)?;
         }
 
-        write!(f, "\n- ")?;
-        write!(f, " <img src=\"https://img.shields.io/crates/d/{}.svg?style=for-the-badge\">", self.name)?;
-        write!(f, " <img src=\"https://img.shields.io/crates/dv/{}.svg?style=for-the-badge\">", self.name)?;
-        write!(f, " <img src=\"https://img.shields.io/crates/l/{}.svg?style=for-the-badge\">", self.name)?;
+//        write!(f, "\n- ")?;
+        write!(f, " <img src=\"https://img.shields.io/crates/d/{}.svg?style={}\">", self.name, FORMAT)?;
+        write!(f, " <img src=\"https://img.shields.io/crates/dv/{}.svg?style={}\">", self.name, FORMAT)?;
+        write!(f, " <img src=\"https://img.shields.io/crates/l/{}.svg?style={}\">", self.name, FORMAT)?;
 
 
         write!(f, "\n\n")?;
@@ -73,9 +75,16 @@ fn write(path: &str, data: &List) -> io::Result<()> {
     let ppath = path::PathBuf::from(path);
     let mut file = File::create(ppath)?;
     file.write_all(b"## Menu\n")?;
-    for (k, _) in &data.items {
+    for (k, v) in &data.items {
         let link = linkize(k);
-        file.write_all(format!("- [{}]({})\n", &k, link).as_bytes())?;
+        file.write_all(format!("- [{}]({}) (", &k, link).as_bytes())?;
+        let mut vc = v.clone();
+        vc.sort();
+        for p in vc {
+            let link = linkize(&p.name);
+            file.write_all(format!("[{}]({}), ", &p.name, link).as_bytes())?;
+        }
+        file.write_all(b")\n")?;
     }
     for (k, v) in &data.items {
         file.write_all(format!("\n## {}\n", &k).as_bytes())?;
