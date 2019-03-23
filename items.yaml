@@ -3,7 +3,7 @@ items:
   Cargo plugins:
     -
       name: cargo-audit
-      gihub: rustsec/cargo-audit
+      github: rustsec/cargo-audit
       description: Audit Cargo.lock for crates with security vulnerabilities reported to the RustSec Advisory Database.
     -
       name: cargo-binutils
@@ -31,7 +31,7 @@ items:
     -
       name: cargo-expand
       github: dtolnay/cargo-expand
-      unstable: true
+      channel: nightly
       description: Once installed, the following command prints out the result of macro expansion and `#[derive]` expansion applied to the current crate.
     -
       name: cargo-fuzz
@@ -76,73 +76,104 @@ items:
       github: sharkdp/bat
     -
       name: bindgen
-      description: desc
+      github: rust-lang/rust-bindgen
+      doc: true
+      description: bindgen automatically generates Rust FFI bindings to C (and some C++) libraries.
     -
       name: capnpc
-      description: desc
+      doc: true
+      github: capnproto/capnproto-rust
+      description: A `Cap'n Proto` code generation for Rust
     -
       name: diesel_cli
-      description: desc
-    -
-      name: doxidize
-      description: desc
+      url: https://diesel.rs
+      github: diesel-rs/diesel
+      description: Diesel CLI is a tool that aids in managing your database schema. Migrations are bi-directional changes to your database that get applied sequentially.
+
     -
       name: exa
-      description: desc
+      url: https://the.exa.website/
+      github: ogham/exa
+      description: exa is a replacement for `ls` written in Rust.
     -
       name: fd-find
-      description: desc
+      github: sharkdp/fd
+      description: fd is a simple, fast and user-friendly alternative to `find`.
     -
       name: fselect
-      description: desc
+      url: https://github.com/jhspetersson/fselect/blob/master/docs/usage.md
+      github: jhspetersson/fselect
+      description: Find files with SQL-like queries
     -
       name: hyperfine
-      description: desc
+      github: sharkdp/hyperfine
+      description: A command-line benchmarking tool (inspired by [bench](https://github.com/Gabriel439/bench)).
     -
       name: just
-      description: desc
+      github: casey/just
+      doc: true
+      description: just is a handy way to save and run project-specific commands (similar to `make`).
     -
       name: mdbook
-      description: desc
+      url: https://rust-lang-nursery.github.io/mdBook/index.html
+      github: rust-lang-nursery/mdBook
+      description: mdBook is a utility to create modern online books from Markdown files.
     -
       name: parallel
-      description: desc
+      github: mmstick/parallel
+      description: This is an attempt at recreating the functionality of [GNU Parallel](https://www.gnu.org/software/parallel/), a work-stealer for the command-line, in Rust under a MIT license.
     -
       name: project_init
-      description: desc
+      channel: nightly
+      github: vmchale/project-init
+      description: pi is a command-line utility to initialize projects. It is written in rust.
     -
       name: ripgrep
-      description: desc
+      github: BurntSushi/ripgrep
+      description: ripgrep is a line-oriented search tool that recursively searches your current directory for a regex pattern while respecting your gitignore rules.
     -
       name: rustsym
-      description: desc
+      github: trixnz/rustsym
+      description: A tool to query symbols from rust code for use in IDEs
     -
       name: sccache
-      description: desc
+      doc: true
+      github: mozilla/sccache
+      description: Sccache is a `ccache`-like tool. It is used as a compiler wrapper and avoids compilation when possible, storing a cache in a remote storage using the Amazon Simple Cloud Storage Service (S3) API, the Google Cloud Storage (GCS) API, or Redis.
     -
       name: skim
-      description: desc
-    -
-      name: skim
-      description: desc
+      github: lotabout/skim
+      description: Half of our life is spent on navigation; files, lines, commands… You need skim! It is a general fuzzy finder that saves you time.
     -
       name: svd2rust
-      description: desc
+      github: japaric/svd2rust
+      description: Generate Rust register maps (`struct`s) from SVD files. Essential for any ARM Cortex-M programmers ou there.
     -
       name: tin-summer
-      description: desc
+      github: vmchale/tin-summer
+      description: If you do a significant amount of programming, you'll probably end up with build artifacts scattered about. sn is a tool to help you find those artifacts.
+
+        `sn` is also a replacement for du. It has nicer output, saner commands and defaults, and it even runs faster on big directories thanks to multithreading.
     -
       name: tokei
-      description: desc
+      url: https://tokei.rs/
+      doc: true
+      github: Aaronepower/tokei
+      description: Tokei is a program that displays statistics about your code. Tokei will show number of files, total lines within those files and code, comments, and blanks grouped by language.
     -
       name: wasm-gc
-      description: desc
+      github: alexcrichton/wasm-gc
+      description: A small command to gc a wasm module and remove all unneeded exports, imports, functions, etc. This is effectively `--gc-sections` for `wasm`.
     -
       name: wasm-pack
-      description: desc
+      url: https://rustwasm.github.io/wasm-pack/
+      github: ashleygwilliams/wasm-pack
+      description: This tool seeks to be a one-stop shop for building and working with rust- generated WebAssembly that you would like to interop with JavaScript, in the browser or with Node.js. wasm-pack helps you build rust-generated WebAssembly packages that you could publish to the npm registry, or otherwise use alongside any javascript packages in workflows that you already use, such as webpack or greenkeeper.
+
     -
       name: xargo
-      description: desc
+      github: japaric/xargo
+      description: Cross-cargo, the sysroot manager that lets you build and customize `std`
 
   Commandline libraries:
     -
@@ -154,11 +185,13 @@ items:
   Data persitance:
     -
       name: serde
+      doc: true
       github: serde-rs/serde
       url: https://serde.rs/
       description: Serde is a framework for serializing and deserializing Rust data structures efficiently and generically.
 
     -
       name: serde_yaml
+      doc: true
       github: dtolnay/serde-yaml
       description: Strongly typed YAML library for Rust

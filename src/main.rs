@@ -21,7 +21,7 @@ struct Package {
     github: Option<String>,
     description: String,
     doc: Option<bool>,
-    unstable: Option<bool>,
+    channel: Option<String>,
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
@@ -46,8 +46,8 @@ impl std::fmt::Display for Package {
         if let Some(true) = &self.doc {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-Docs.RS-navy.svg?style={}\">](https://docs.rs/{})", FORMAT, self.name)?;
         }
-        if let Some(true) = &self.unstable {
-            write!(f, " <img src=\"https://img.shields.io/badge/Warning-Requires_unstable-red.svg?style={}\">", FORMAT)?;
+        if let Some(i) = &self.channel {
+            write!(f, " <img src=\"https://img.shields.io/badge/Warning-Requires_{}-red.svg?style={}\">", i, FORMAT)?;
         }
 
         write!(f, "\n")?;
