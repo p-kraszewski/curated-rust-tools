@@ -12,7 +12,7 @@ items:
     -
       name: cargo-bom
       github: sensorfu/cargo-bom
-      description: This tool (cargo bom) can be used to construct Bill of Materials for software using Cargo package manager.
+      description: This tool can be used to construct Bill of Materials for software using Cargo package manager.
 
         The output of cargo bom has two sections. First it prints out a table with all dependencies, version numbers and names of licenses. Then it prints all license texts found from depended projects (files matching glob "LICENSE*").
     -
@@ -21,37 +21,53 @@ items:
       description: Display information on the cargo cache `~/.cargo/`. Optional cache pruning.
     -
       name: cargo-check
-      description: desc
+      github: rsolomo/cargo-check
+      description: This is a wrapper around `cargo rustc -- -Zno-trans`. It can be helpful for running a faster compile if you only need correctness checks.
     -
       name: cargo-deb
-      description: desc
+      github: mmstick/cargo-deb
+      doc: true
+      description: This is a Cargo helper command which automatically creates binary Debian packages (`.deb`) from Cargo projects.
     -
       name: cargo-expand
-      description: desc
+      github: dtolnay/cargo-expand
+      unstable: true
+      description: Once installed, the following command prints out the result of macro expansion and `#[derive]` expansion applied to the current crate.
     -
       name: cargo-fuzz
-      description: desc
+      github: rust-fuzz/cargo-fuzz
+      description: Simple wrapper around libFuzzer
     -
       name: cargo-geiger
-      description: desc
+      github: anderejd/cargo-geiger
+      description: A program that list statistics related to usage of `unsafe` Rust code in a Rust crate and all its dependencies.
     -
       name: cargo-generate
-      description: desc
+      github: ashleygwilliams/cargo-generate
+      description: The `cargo-generate` is a developer tool to help you get up and running quickly with a new Rust project by leveraging a pre-existing git repository as a template.
     -
       name: cargo-graph
-      description: desc
+      github: kbknapp/cargo-graph.git
+      description: A cargo subcommand for building GraphViz DOT files of dependency graphs.
     -
       name: cargo-make
-      description: desc
+      github: sagiegurari/cargo-make.git
+      url: https://sagiegurari.github.io/cargo-make
+      description: The cargo-make task runner enables to define and configure sets of tasks and run them as a flow.
     -
       name: cargo-testify
-      description: desc
+      doc: true
+      github: greyblake/cargo-testify
+      description: Automatically runs tests on your Rust project and notifies about the result.
     -
       name: cargo-update
-      description: desc
+      github: nabijaczleweli/cargo-update
+      description: A `cargo` subcommand for checking and applying updates to installed executables
     -
       name: cargo-watch
-      description: desc
+      doc: true
+      github: passcod/cargo-watch
+      description: Cargo Watch watches over your project's source for changes, and runs Cargo commands when they occur.
 
   Commandline tools:
     -

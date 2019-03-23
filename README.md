@@ -16,56 +16,56 @@ Cargo subcommands to invoke the LLVM tools shipped with the Rust toolchain
 ### <a name="cargo-bom"></a>cargo-bom [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-bom) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/sensorfu/cargo-bom)
  <img src="https://img.shields.io/github/last-commit/sensorfu/cargo-bom.svg?style=plastic"> <img src="https://img.shields.io/github/tag/sensorfu/cargo-bom.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-bom.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-bom.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-bom.svg?style=plastic">
 
-This tool (cargo bom) can be used to construct Bill of Materials for software using Cargo package manager.
+This tool can be used to construct Bill of Materials for software using Cargo package manager.
 The output of cargo bom has two sections. First it prints out a table with all dependencies, version numbers and names of licenses. Then it prints all license texts found from depended projects (files matching glob "LICENSE*").
 ### <a name="cargo-cache"></a>cargo-cache [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-cache) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/matthiaskrgr/cargo-cache)
  <img src="https://img.shields.io/github/last-commit/matthiaskrgr/cargo-cache.svg?style=plastic"> <img src="https://img.shields.io/github/tag/matthiaskrgr/cargo-cache.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-cache.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-cache.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-cache.svg?style=plastic">
 
 Display information on the cargo cache `~/.cargo/`. Optional cache pruning.
-### <a name="cargo-check"></a>cargo-check [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-check)
- <img src="https://img.shields.io/crates/d/cargo-check.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-check.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-check.svg?style=plastic">
+### <a name="cargo-check"></a>cargo-check [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-check) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/rsolomo/cargo-check)
+ <img src="https://img.shields.io/github/last-commit/rsolomo/cargo-check.svg?style=plastic"> <img src="https://img.shields.io/github/tag/rsolomo/cargo-check.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-check.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-check.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-check.svg?style=plastic">
 
-desc
-### <a name="cargo-deb"></a>cargo-deb [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-deb)
- <img src="https://img.shields.io/crates/d/cargo-deb.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-deb.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-deb.svg?style=plastic">
+This is a wrapper around `cargo rustc -- -Zno-trans`. It can be helpful for running a faster compile if you only need correctness checks.
+### <a name="cargo-deb"></a>cargo-deb [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-deb) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/mmstick/cargo-deb) [<img src="https://img.shields.io/badge/URL-Docs.RS-navy.svg?style=plastic">](https://docs.rs/cargo-deb)
+ <img src="https://img.shields.io/github/last-commit/mmstick/cargo-deb.svg?style=plastic"> <img src="https://img.shields.io/github/tag/mmstick/cargo-deb.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-deb.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-deb.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-deb.svg?style=plastic">
 
-desc
-### <a name="cargo-expand"></a>cargo-expand [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-expand)
- <img src="https://img.shields.io/crates/d/cargo-expand.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-expand.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-expand.svg?style=plastic">
+This is a Cargo helper command which automatically creates binary Debian packages (`.deb`) from Cargo projects.
+### <a name="cargo-expand"></a>cargo-expand [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-expand) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/dtolnay/cargo-expand) <img src="https://img.shields.io/badge/Warning-Requires_unstable-red.svg?style=plastic">
+ <img src="https://img.shields.io/github/last-commit/dtolnay/cargo-expand.svg?style=plastic"> <img src="https://img.shields.io/github/tag/dtolnay/cargo-expand.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-expand.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-expand.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-expand.svg?style=plastic">
 
-desc
-### <a name="cargo-fuzz"></a>cargo-fuzz [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-fuzz)
- <img src="https://img.shields.io/crates/d/cargo-fuzz.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-fuzz.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-fuzz.svg?style=plastic">
+Once installed, the following command prints out the result of macro expansion and `#[derive]` expansion applied to the current crate.
+### <a name="cargo-fuzz"></a>cargo-fuzz [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-fuzz) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/rust-fuzz/cargo-fuzz)
+ <img src="https://img.shields.io/github/last-commit/rust-fuzz/cargo-fuzz.svg?style=plastic"> <img src="https://img.shields.io/github/tag/rust-fuzz/cargo-fuzz.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-fuzz.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-fuzz.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-fuzz.svg?style=plastic">
 
-desc
-### <a name="cargo-geiger"></a>cargo-geiger [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-geiger)
- <img src="https://img.shields.io/crates/d/cargo-geiger.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-geiger.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-geiger.svg?style=plastic">
+Simple wrapper around libFuzzer
+### <a name="cargo-geiger"></a>cargo-geiger [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-geiger) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/anderejd/cargo-geiger)
+ <img src="https://img.shields.io/github/last-commit/anderejd/cargo-geiger.svg?style=plastic"> <img src="https://img.shields.io/github/tag/anderejd/cargo-geiger.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-geiger.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-geiger.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-geiger.svg?style=plastic">
 
-desc
-### <a name="cargo-generate"></a>cargo-generate [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-generate)
- <img src="https://img.shields.io/crates/d/cargo-generate.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-generate.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-generate.svg?style=plastic">
+A program that list statistics related to usage of `unsafe` Rust code in a Rust crate and all its dependencies.
+### <a name="cargo-generate"></a>cargo-generate [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-generate) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/ashleygwilliams/cargo-generate)
+ <img src="https://img.shields.io/github/last-commit/ashleygwilliams/cargo-generate.svg?style=plastic"> <img src="https://img.shields.io/github/tag/ashleygwilliams/cargo-generate.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-generate.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-generate.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-generate.svg?style=plastic">
 
-desc
-### <a name="cargo-graph"></a>cargo-graph [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-graph)
- <img src="https://img.shields.io/crates/d/cargo-graph.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-graph.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-graph.svg?style=plastic">
+The `cargo-generate` is a developer tool to help you get up and running quickly with a new Rust project by leveraging a pre-existing git repository as a template.
+### <a name="cargo-graph"></a>cargo-graph [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-graph) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/kbknapp/cargo-graph.git)
+ <img src="https://img.shields.io/github/last-commit/kbknapp/cargo-graph.git.svg?style=plastic"> <img src="https://img.shields.io/github/tag/kbknapp/cargo-graph.git.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-graph.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-graph.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-graph.svg?style=plastic">
 
-desc
-### <a name="cargo-make"></a>cargo-make [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-make)
- <img src="https://img.shields.io/crates/d/cargo-make.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-make.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-make.svg?style=plastic">
+A cargo subcommand for building GraphViz DOT files of dependency graphs.
+### <a name="cargo-make"></a>cargo-make [<img src="https://img.shields.io/badge/URL-homepage-navy.svg?style=plastic">](https://sagiegurari.github.io/cargo-make) [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-make) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/sagiegurari/cargo-make.git)
+ <img src="https://img.shields.io/github/last-commit/sagiegurari/cargo-make.git.svg?style=plastic"> <img src="https://img.shields.io/github/tag/sagiegurari/cargo-make.git.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-make.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-make.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-make.svg?style=plastic">
 
-desc
-### <a name="cargo-testify"></a>cargo-testify [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-testify)
- <img src="https://img.shields.io/crates/d/cargo-testify.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-testify.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-testify.svg?style=plastic">
+The cargo-make task runner enables to define and configure sets of tasks and run them as a flow.
+### <a name="cargo-testify"></a>cargo-testify [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-testify) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/greyblake/cargo-testify) [<img src="https://img.shields.io/badge/URL-Docs.RS-navy.svg?style=plastic">](https://docs.rs/cargo-testify)
+ <img src="https://img.shields.io/github/last-commit/greyblake/cargo-testify.svg?style=plastic"> <img src="https://img.shields.io/github/tag/greyblake/cargo-testify.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-testify.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-testify.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-testify.svg?style=plastic">
 
-desc
-### <a name="cargo-update"></a>cargo-update [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-update)
- <img src="https://img.shields.io/crates/d/cargo-update.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-update.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-update.svg?style=plastic">
+Automatically runs tests on your Rust project and notifies about the result.
+### <a name="cargo-update"></a>cargo-update [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-update) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/nabijaczleweli/cargo-update)
+ <img src="https://img.shields.io/github/last-commit/nabijaczleweli/cargo-update.svg?style=plastic"> <img src="https://img.shields.io/github/tag/nabijaczleweli/cargo-update.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-update.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-update.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-update.svg?style=plastic">
 
-desc
-### <a name="cargo-watch"></a>cargo-watch [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-watch)
- <img src="https://img.shields.io/crates/d/cargo-watch.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-watch.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-watch.svg?style=plastic">
+A `cargo` subcommand for checking and applying updates to installed executables
+### <a name="cargo-watch"></a>cargo-watch [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-watch) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/passcod/cargo-watch) [<img src="https://img.shields.io/badge/URL-Docs.RS-navy.svg?style=plastic">](https://docs.rs/cargo-watch)
+ <img src="https://img.shields.io/github/last-commit/passcod/cargo-watch.svg?style=plastic"> <img src="https://img.shields.io/github/tag/passcod/cargo-watch.svg?style=plastic"> <img src="https://img.shields.io/crates/d/cargo-watch.svg?style=plastic"> <img src="https://img.shields.io/crates/dv/cargo-watch.svg?style=plastic"> <img src="https://img.shields.io/crates/l/cargo-watch.svg?style=plastic">
 
-desc
+Cargo Watch watches over your project's source for changes, and runs Cargo commands when they occur.
 
 ## Commandline libraries
 ### <a name="clap"></a>clap [<img src="https://img.shields.io/badge/URL-homepage-navy.svg?style=plastic">](https://clap.rs) [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/clap) [<img src="https://img.shields.io/badge/URL-GitHub-navy.svg?style=plastic">](https://github.com/clap-rs/clap)

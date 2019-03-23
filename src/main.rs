@@ -20,6 +20,8 @@ struct Package {
     url: Option<String>,
     github: Option<String>,
     description: String,
+    doc: Option<bool>,
+    unstable: Option<bool>,
 }
 
 #[derive(Debug, PartialEq, Serialize, Deserialize)]
@@ -40,6 +42,14 @@ impl std::fmt::Display for Package {
         if let Some(i) = &self.github {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-GitHub-navy.svg?style={}\">](https://github.com/{})", FORMAT, i)?;
         }
+
+        if let Some(true) = &self.doc {
+            write!(f, " [<img src=\"https://img.shields.io/badge/URL-Docs.RS-navy.svg?style={}\">](https://docs.rs/{})", FORMAT, self.name)?;
+        }
+        if let Some(true) = &self.unstable {
+            write!(f, " <img src=\"https://img.shields.io/badge/Warning-Requires_unstable-red.svg?style={}\">", FORMAT)?;
+        }
+
         write!(f, "\n")?;
 
         if let Some(i) = &self.github {
