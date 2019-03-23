@@ -47,11 +47,11 @@ items:
       description: The `cargo-generate` is a developer tool to help you get up and running quickly with a new Rust project by leveraging a pre-existing git repository as a template.
     -
       name: cargo-graph
-      github: kbknapp/cargo-graph.git
+      github: kbknapp/cargo-graph
       description: A cargo subcommand for building GraphViz DOT files of dependency graphs.
     -
       name: cargo-make
-      github: sagiegurari/cargo-make.git
+      github: sagiegurari/cargo-make
       url: https://sagiegurari.github.io/cargo-make
       description: The cargo-make task runner enables to define and configure sets of tasks and run them as a flow.
     -
