@@ -1,0 +1,20 @@
+---
+items:
+  libs:
+    - name: PkgName3
+      github_name: vendor2/crate1
+      crate_name: CrateName3
+      description: Description3
+    - name: PkgName4
+      github_name: vendor2/crate2
+      crate_name: CrateName4
+      description: Description4
+  tools:
+    - name: PkgName1
+      github_name: vendor1/crate1
+      crate_name: CrateName1
+      description: Description1
+    - name: PkgName2
+      github_name: vendor1/crate2
+      crate_name: CrateName2
+      description: Description2

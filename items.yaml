@@ -1,0 +1,17 @@
+---
+items:
+  Commandline libraries:
+    -
+      name: clap
+      github: clap-rs/clap
+      url: https://clap.rs
+      description: A full featured, fast Command Line Argument Parser for Rust
+
+  Data persitance:
+    -
+      name: serde
+      github: serde-rs/serde
+      url: https://serde.rs/
+      description: Serde is a framework for serializing and deserializing Rust data structures efficiently and generically.
+
+        The Serde ecosystem consists of data structures that know how to serialize and deserialize themselves along with data formats that know how to serialize and deserialize other things. Serde provides the layer by which these two groups interact with each other, allowing any supported data structure to be serialized and deserialized using any supported data format.
