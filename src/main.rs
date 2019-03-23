@@ -29,7 +29,7 @@ struct List {
 
 impl std::fmt::Display for Package {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(f, "### <a name=\"{}\"></a>{}", linkize(&self.name), self.name.trim())?;
+        write!(f, "### {}", self.name.trim())?;
 
         if let Some(i) = &self.url {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-homepage-navy.svg?style={}\">]({})", FORMAT, i)?;
@@ -77,18 +77,18 @@ fn write(path: &str, data: &List) -> io::Result<()> {
     file.write_all(b"## Menu\n")?;
     for (k, v) in &data.items {
         let link = linkize(k);
-        file.write_all(format!("- [{}](#{}) (", &k, link).as_bytes())?;
+        file.write_all(format!("- [{}](#user-content-{}) (", &k, link).as_bytes())?;
         let mut vc = v.clone();
         vc.sort();
         for p in vc {
             let link = linkize(&p.name);
-            file.write_all(format!("[{}](#{}), ", &p.name, link).as_bytes())?;
+            file.write_all(format!("[{}](#user-content-{}), ", &p.name, link).as_bytes())?;
         }
         file.write_all(b")\n")?;
     }
     for (k, v) in &data.items {
         //write!(f, "### <a name=\"{}\"></a>{}", linkize(&self.name), self.name.trim())?;
-        file.write_all(format!("\n## <a name=\"{}\"></a>{}\n", linkize(&k), &k.trim()).as_bytes())?;
+        file.write_all(format!("\n## {}\n", &k.trim()).as_bytes())?;
 
         let mut vc = v.clone();
         vc.sort();
