@@ -77,7 +77,7 @@ fn write(path: &str, data: &List) -> io::Result<()> {
         file.write_all(format!("- [{}]({})\n", &k, link).as_bytes())?;
     }
     for (k, v) in &data.items {
-        file.write_all(format!("\n##{}\n", &k).as_bytes())?;
+        file.write_all(format!("\n## {}\n", &k).as_bytes())?;
 
         let mut vc = v.clone();
         vc.sort();
