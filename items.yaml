@@ -1,5 +1,133 @@
 ---
 items:
+  Cargo plugins:
+    -
+      name: cargo-audit
+      gihub: rustsec/cargo-audit
+      description: Audit Cargo.lock for crates with security vulnerabilities reported to the RustSec Advisory Database.
+    -
+      name: cargo-binutils
+      github: japaric/cargo-binutils
+      description: Cargo subcommands to invoke the LLVM tools shipped with the Rust toolchain
+    -
+      name: cargo-bom
+      github: sensorfu/cargo-bom
+      description: This tool (cargo bom) can be used to construct Bill of Materials for software using Cargo package manager.
+
+        The output of cargo bom has two sections. First it prints out a table with all dependencies, version numbers and names of licenses. Then it prints all license texts found from depended projects (files matching glob "LICENSE*").
+    -
+      name: cargo-cache
+      github: matthiaskrgr/cargo-cache
+      description: Display information on the cargo cache `~/.cargo/`. Optional cache pruning.
+    -
+      name: cargo-check
+      description: desc
+    -
+      name: cargo-deb
+      description: desc
+    -
+      name: cargo-expand
+      description: desc
+    -
+      name: cargo-fuzz
+      description: desc
+    -
+      name: cargo-geiger
+      description: desc
+    -
+      name: cargo-generate
+      description: desc
+    -
+      name: cargo-graph
+      description: desc
+    -
+      name: cargo-make
+      description: desc
+    -
+      name: cargo-testify
+      description: desc
+    -
+      name: cargo-update
+      description: desc
+    -
+      name: cargo-watch
+      description: desc
+
+  Commandline tools:
+    -
+      name: bat
+      description: A `cat(1)` clone with syntax highlighting and Git integration.
+      github: sharkdp/bat
+    -
+      name: bindgen
+      description: desc
+    -
+      name: capnpc
+      description: desc
+    -
+      name: diesel_cli
+      description: desc
+    -
+      name: doxidize
+      description: desc
+    -
+      name: exa
+      description: desc
+    -
+      name: fd-find
+      description: desc
+    -
+      name: fselect
+      description: desc
+    -
+      name: hyperfine
+      description: desc
+    -
+      name: just
+      description: desc
+    -
+      name: mdbook
+      description: desc
+    -
+      name: parallel
+      description: desc
+    -
+      name: project_init
+      description: desc
+    -
+      name: ripgrep
+      description: desc
+    -
+      name: rustsym
+      description: desc
+    -
+      name: sccache
+      description: desc
+    -
+      name: skim
+      description: desc
+    -
+      name: skim
+      description: desc
+    -
+      name: svd2rust
+      description: desc
+    -
+      name: tin-summer
+      description: desc
+    -
+      name: tokei
+      description: desc
+    -
+      name: wasm-gc
+      description: desc
+    -
+      name: wasm-pack
+      description: desc
+    -
+      name: xargo
+      description: desc
+
   Commandline libraries:
     -
       name: clap
