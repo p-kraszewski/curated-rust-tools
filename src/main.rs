@@ -29,7 +29,7 @@ struct List {
 
 impl std::fmt::Display for Package {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
-        write!(f, "### {}", self.name)?;
+        write!(f, "### <a name=\"{}\"></a>{}", linkize(&self.name), self.name.trim())?;
 
         if let Some(i) = &self.url {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-homepage-navy.svg?style={}\">]({})", FORMAT, i)?;
@@ -87,7 +87,8 @@ fn write(path: &str, data: &List) -> io::Result<()> {
         file.write_all(b")\n")?;
     }
     for (k, v) in &data.items {
-        file.write_all(format!("\n## {}\n", &k).as_bytes())?;
+        //write!(f, "### <a name=\"{}\"></a>{}", linkize(&self.name), self.name.trim())?;
+        file.write_all(format!("\n## <a name=\"{}\"></a>{}\n", linkize(&k), &k.trim()).as_bytes())?;
 
         let mut vc = v.clone();
         vc.sort();
