@@ -1,8 +1,8 @@
 ## Menu
-- [Cargo plugins](cargo-plugins) ([cargo-audit](cargo-audit), [cargo-binutils](cargo-binutils), [cargo-bom](cargo-bom), [cargo-cache](cargo-cache), [cargo-check](cargo-check), [cargo-deb](cargo-deb), [cargo-expand](cargo-expand), [cargo-fuzz](cargo-fuzz), [cargo-geiger](cargo-geiger), [cargo-generate](cargo-generate), [cargo-graph](cargo-graph), [cargo-make](cargo-make), [cargo-testify](cargo-testify), [cargo-update](cargo-update), [cargo-watch](cargo-watch), )
-- [Commandline libraries](commandline-libraries) ([clap](clap), )
-- [Commandline tools](commandline-tools) ([bat](bat), [bindgen](bindgen), [capnpc](capnpc), [diesel_cli](diesel_cli), [doxidize](doxidize), [exa](exa), [fd-find](fd-find), [fselect](fselect), [hyperfine](hyperfine), [just](just), [mdbook](mdbook), [parallel](parallel), [project_init](project_init), [ripgrep](ripgrep), [rustsym](rustsym), [sccache](sccache), [skim](skim), [skim](skim), [svd2rust](svd2rust), [tin-summer](tin-summer), [tokei](tokei), [wasm-gc](wasm-gc), [wasm-pack](wasm-pack), [xargo](xargo), )
-- [Data persitance](data-persitance) ([serde](serde), [serde_yaml](serde_yaml), )
+- [Cargo plugins](#cargo-plugins) ([cargo-audit](#cargo-audit), [cargo-binutils](#cargo-binutils), [cargo-bom](#cargo-bom), [cargo-cache](#cargo-cache), [cargo-check](#cargo-check), [cargo-deb](#cargo-deb), [cargo-expand](#cargo-expand), [cargo-fuzz](#cargo-fuzz), [cargo-geiger](#cargo-geiger), [cargo-generate](#cargo-generate), [cargo-graph](#cargo-graph), [cargo-make](#cargo-make), [cargo-testify](#cargo-testify), [cargo-update](#cargo-update), [cargo-watch](#cargo-watch), )
+- [Commandline libraries](#commandline-libraries) ([clap](#clap), )
+- [Commandline tools](#commandline-tools) ([bat](#bat), [bindgen](#bindgen), [capnpc](#capnpc), [diesel_cli](#diesel_cli), [doxidize](#doxidize), [exa](#exa), [fd-find](#fd-find), [fselect](#fselect), [hyperfine](#hyperfine), [just](#just), [mdbook](#mdbook), [parallel](#parallel), [project_init](#project_init), [ripgrep](#ripgrep), [rustsym](#rustsym), [sccache](#sccache), [skim](#skim), [skim](#skim), [svd2rust](#svd2rust), [tin-summer](#tin-summer), [tokei](#tokei), [wasm-gc](#wasm-gc), [wasm-pack](#wasm-pack), [xargo](#xargo), )
+- [Data persitance](#data-persitance) ([serde](#serde), [serde_yaml](#serde_yaml), )
 
 ## Cargo plugins
 ### cargo-audit [<img src="https://img.shields.io/badge/URL-Crates.IO-navy.svg?style=plastic">](https://crates.io/crates/cargo-audit)

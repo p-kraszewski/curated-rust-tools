@@ -77,12 +77,12 @@ fn write(path: &str, data: &List) -> io::Result<()> {
     file.write_all(b"## Menu\n")?;
     for (k, v) in &data.items {
         let link = linkize(k);
-        file.write_all(format!("- [{}]({}) (", &k, link).as_bytes())?;
+        file.write_all(format!("- [{}](#{}) (", &k, link).as_bytes())?;
         let mut vc = v.clone();
         vc.sort();
         for p in vc {
             let link = linkize(&p.name);
-            file.write_all(format!("[{}]({}), ", &p.name, link).as_bytes())?;
+            file.write_all(format!("[{}](#{}), ", &p.name, link).as_bytes())?;
         }
         file.write_all(b")\n")?;
     }
