@@ -27,7 +27,7 @@ struct List {
 impl std::fmt::Display for Package {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         write!(f, "### {}", self.name)?;
-        write!(f, "\n")?;
+        write!(f, "\n- ")?;
 
         if let Some(i) = &self.url {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-homepage-navy.svg?style=for-the-badge\">]({})", i)?;
@@ -40,12 +40,13 @@ impl std::fmt::Display for Package {
         }
 
         if let Some(i) = &self.github {
+            write!(f, "\n- ")?;
             write!(f, " <img src=\"https://img.shields.io/github/last-commit/{}.svg?style=for-the-badge\">", i)?;
             write!(f, " <img src=\"https://img.shields.io/github/tag/{}.svg?style=for-the-badge\">", i)?;
 //            write!(f, " <img src=\"https://img.shields.io/github/commit-activity/y/{}.svg?style=for-the-badge\">", gh)?;
         }
 
-
+        write!(f, "\n- ")?;
         write!(f, " <img src=\"https://img.shields.io/crates/d/{}.svg?style=for-the-badge\">", self.name)?;
         write!(f, " <img src=\"https://img.shields.io/crates/dv/{}.svg?style=for-the-badge\">", self.name)?;
         write!(f, " <img src=\"https://img.shields.io/crates/l/{}.svg?style=for-the-badge\">", self.name)?;
