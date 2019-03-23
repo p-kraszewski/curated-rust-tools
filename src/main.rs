@@ -30,7 +30,6 @@ struct List {
 impl std::fmt::Display for Package {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         write!(f, "### {}", self.name)?;
-        write!(f, "\n")?;
 
         if let Some(i) = &self.url {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-homepage-navy.svg?style={}\">]({})", FORMAT, i)?;
@@ -41,6 +40,7 @@ impl std::fmt::Display for Package {
         if let Some(i) = &self.github {
             write!(f, " [<img src=\"https://img.shields.io/badge/URL-GitHub-navy.svg?style={}\">](https://github.com/{})", FORMAT, i)?;
         }
+        write!(f, "\n")?;
 
         if let Some(i) = &self.github {
             write!(f, " <img src=\"https://img.shields.io/github/last-commit/{}.svg?style={}\">", i, FORMAT)?;
